@@ -1,0 +1,82 @@
+:root {
+  --bg: #f0f0f0;
+  --text: #111;
+  --card-bg: #fff;
+  --accent: #ff6b6b;
+
+  --dark-bg: #181818;
+  --dark-text: #eee;
+  --dark-card: #2a2a2a;
+
+  --radius: 14px;
+  --space: 1.5rem;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.site-header {
+  padding: var(--space);
+  text-align: center;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+#toggle-theme {
+  font-size: 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  gap: var(--space);
+  padding: var(--space);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Dark Theme */
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark .site-header {
+  background: var(--dark-card);
+}
+
+body.dark .card {
+  background: var(--dark-card);
+}
+
+body.dark #toggle-theme {
+  background: #444;
+}
