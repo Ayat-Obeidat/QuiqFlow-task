@@ -5,6 +5,12 @@
   Note that you can't just use indexOf. Your function must run in O(log(n)) time.
  */
 // the solution
+/*
+  Custom binary search function to find index of a target in a sorted array
+ @param {number[]} array - Sorted array of numbers
+ @param {number} target - Number to search for
+ @returns {number} - Index if found, otherwise -1
+ */
 
 function findIndex(list, value) {
   let start = 0;
@@ -24,5 +30,5 @@ function findIndex(list, value) {
     }
   }
 
-  return -1;
+  return -1; // Target not found
 }
